@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validation</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        <script src="form-validation.js"></script>
+        <script>
+
+
+        </script>
+
+        <style>
+
+            div{
+                padding-top: 6px;
+            }
+
+            form{
+                border-color:lightgray;
+                border-width:1px;
+                border-style: solid;
+                width:60%;
+            }
+
+            label{
+                font-weight:bold;
+                font-family: tahoma;
+                font-size: 12px;
+                text-align: right;
+                width:100px;
+                display:block;
+                float:left;
+                padding:5px;
+            }
+
+            .input,.submit{
+                border-color:lightgray;
+                border-width:1px;
+                border-style:solid;
+            }
+            .submit{
+                margin:5px;
+                margin-left:50px;
+                width:50px;
+                padding:5px;
+                border-radius:3px;
+                background-color: rgb(245,245,245);
+                font-weight:bold;
+            }
+
+            .submit:hover{
+                background-color:rgb(240,240,240);
+                cursor:pointer;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <form id="registration" name="registration" action="">
+
+            <div> <label>Username:</label>
+                <input class="element" type="text" id="username"> <span id="username_feedback"></span>
+            </div>
+            <div> <label>E-mail:</label>
+                <input class="input" type="text" id="email"> <span id="email_feedback"></span>
+            </div>
+            <div>
+                <label>Position:</label>
+                <select name="position" class="input" id="position">
+                    <option value="none">Not selected</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="mechanic">Car Mechanic</option>
+                </select>
+                <span id="position_feedback"></span>
+            </div>
+            <div> <label>Type:</label>
+                <input type="radio" name="type" value="full" id="employment1">Full-time<br>
+                <input type="radio" name="type" value="part" id="employment2">Part-time
+                <span id="type_feedback"></span>
+            </div>
+            <div>
+                <input type="button" id="btn" value="Submit">
+            </div>
+
+
+        </form>
+    </body>
+</html>
+
+
